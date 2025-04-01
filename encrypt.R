@@ -1,6 +1,6 @@
 if (!requireNamespace("staticryptR", quietly = TRUE)) {
   stop(
-    "staticryptR package is required for this script to work. 
+    "staticryptR package is required for this script to work.
     Please install with: install.packages('staticryptR')",
     call. = FALSE
   )
@@ -12,10 +12,20 @@ if (isTRUE(staticryptR::check_system())) {
   )
 }
 
+prompt_for_password <- function(prompt = "Enter a password: ") {
+  pwd <- if (interactive()) {
+    readline(prompt)
+  } else {
+    cat(prompt)
+    readLines("stdin", n = 1)
+  }
+  pwd
+}
+
 staticryptR::staticryptr(
   files = "_site/",
   directory = ".",
-  password = "anicelongpassword",
+  password = Sys.getenv("STATICRYPT_PASSWORD", prompt_for_password()),
   short = FALSE, # set to TRUE if you want to use a short password
   recursive = TRUE,
   template_color_primary = "#6667AB",

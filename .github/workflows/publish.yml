@@ -1,7 +1,10 @@
 on:
   workflow_dispatch:
-  push:
-    branches: main
+    inputs:
+      password:
+        descript: 'Website Password'
+        required: true
+        type: string
 
 name: Quarto Publish
 
@@ -40,3 +43,4 @@ jobs:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATICRYPT_PASSWORD: ${{ inputs.password }}
