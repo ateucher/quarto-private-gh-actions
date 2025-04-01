@@ -41,7 +41,6 @@ jobs:
         run: |
           STATICRYPT_PASSWORD=$(cat $GITHUB_EVENT_PATH | jq -r '.inputs.password' )
           echo "::add-mask::$STATICRYPT_PASSWORD"
-          echo STATICRYPT_PASSWORD="$STATICRYPT_PASSWORD" >> ~/.Renviron
 
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
