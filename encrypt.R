@@ -13,7 +13,7 @@ if (isTRUE(staticryptR::check_system())) {
 }
 
 staticryptR::staticryptr(
-  files = "docs/",
+  files = "_site/",
   directory = ".",
   password = "anicelongpassword",
   short = FALSE, # set to TRUE if you want to use a short password
