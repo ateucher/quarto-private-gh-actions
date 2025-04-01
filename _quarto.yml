@@ -2,6 +2,9 @@ project:
   type: website
   post-render: encrypt.R
 
+execute: 
+  freeze: auto
+
 website:
   title: "quarto-private-website"
   navbar:
