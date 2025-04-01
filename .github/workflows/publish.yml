@@ -37,10 +37,15 @@ jobs:
       - name: Set up Quarto
         uses: quarto-dev/quarto-actions/setup@v2
 
+      - name: Mask input password and add to Renviron
+        run: |
+          STATICRYPT_PASSWORD=$(cat $GITHUB_EVENT_PATH | jq -r '.inputs.password' )
+          echo "::add-mask::$STATICRYPT_PASSWORD"
+          echo STATICRYPT_PASSWORD="$STATICRYPT_PASSWORD" >> ~/.Renviron
+
       - name: Render and Publish
         uses: quarto-dev/quarto-actions/publish@v2
         with:
           target: gh-pages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          STATICRYPT_PASSWORD: ${{ inputs.password }}
