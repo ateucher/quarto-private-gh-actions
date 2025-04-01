@@ -28,7 +28,7 @@ jobs:
       - uses: r-lib/actions/setup-r-dependencies@v2
         with:
           cache-version: 1
-          extra-packages: |
+          packages: |
             any::staticryptR
 
       - name: Set up Quarto
