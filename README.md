@@ -28,11 +28,25 @@ In R:
     staticrytR::install_staticrypt()
     ```
 
-`encrypt.R` contains the script that will do the encryption. Set options and 
-your password in that file (again note that this file will be visible if your 
-repo is public). This script will be run automatically when the site is rendered
-by `quarto render` or `quarto preview` - it is specified in the `post-render` 
-paramater in `_quarto.yml`.
+`encrypt.R` contains the script that will do the encryption. Set options in that
+file. This script will be run automatically when the site is rendered - it is
+specified in the `post-render` parameter in `_quarto.yml`.
 
-By default this template stores and encripts the rendered site in the `docs/`
-directory.
+This template renders and encrypts the site in the `gh-pages` branch via a
+GitHub Action. To enable it, go to your repository on GitHub:
+
+1. Click "Settings"
+2. Click "Pages"
+3. Under "Build and Deployment > Source", choose "Deploy from a branch"
+4. Under "Branch" choose "gh-pages" and "/ (root)"
+
+![A screenshot of a GitHub repository setting for GitHub pages](gh-pages-settings.png)
+
+To render, encrypt, and deploy your site:
+
+1. Go to the "Actions" tab in your repository.
+2. In the left menu click the "Quarto Publish" action
+3. Click the "Run Workflow" dropdown on the right, leave "branch" set to "main", 
+enter a password for your site, and click "Run workflow"
+
+![A screenshot of manually running Quarto Publish workflow in GitHub Actions](run-workflow.png)

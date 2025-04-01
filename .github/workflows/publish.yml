@@ -2,7 +2,7 @@ on:
   workflow_dispatch:
     inputs:
       password:
-        descript: 'Website Password'
+        description: 'Website Password'
         required: true
         type: string
 
