@@ -4,10 +4,15 @@ This is a Quarto website template with password protection, using the
 [staticryptR](https://github.com/nikitoshina/staticryptR) package.
 
 This will encrypt the rendered website and put it behind a simple password
-prompt. It does not encrypt the source files -- they will still be visible if they
-are in a public repository -- so this is likely most useful if the source files
-are in a private repository but GitHub pages is set to be public (e.g., for
-[GitHub Enterprise Cloud users](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)).
+prompt. It does not encrypt the source files -- they will still be visible if
+they are in a public repository -- so this is likely most useful if the source
+files are in a private repository but GitHub pages is set to be public (e.g.,
+for [GitHub Enterprise Cloud
+users](https://docs.github.com/en/enterprise-cloud@latest/pages/getting-started-with-github-pages/changing-the-visibility-of-your-github-pages-site)),
+GitHub Pro, and GitHub Team. With [GitHub
+Free](https://docs.github.com/en/get-started/learning-about-github/githubs-plans)
+(personal and organizations) it is not possible to publish a GitHub Pages
+website from a private repository
 
 The encryption uses the [staticryptR](https://github.com/nikitoshina/staticryptR)
 R package, which wraps the Node library [staticrypt](https://github.com/robinmoisson/staticrypt).
