@@ -55,9 +55,9 @@ rendered site in the `docs/` directory in the main branch, see the repository
 template at
 [ateucher/quarto-private-website](https://github.com/ateucher/quarto-private-website).
 
-* If you forget to include all branches when you create your repository from this
+\*_If you forget to include all branches when you create your repository from this
 template, follow the directions on the
 [Quarto website](https://quarto.org/docs/publishing/github-pages.html#source-branch)
 to do this. When you have done that, make sure you are back on your `main` branch by running in your
 terminal: `git checkout main` (or switch back to `main` in your Git GUI, e.g.,
-in RStudio). 
+in RStudio)._
