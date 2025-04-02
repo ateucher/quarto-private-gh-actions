@@ -58,6 +58,6 @@ template at
 \*_If you forget to include all branches when you create your repository from this
 template, follow the directions on the
 [Quarto website](https://quarto.org/docs/publishing/github-pages.html#source-branch)
-to do this. When you have done that, make sure you are back on your `main` branch by running in your
+to create an orphan `gh-pages` branch. When you have done that, make sure you are back on your `main` branch by running in your
 terminal: `git checkout main` (or switch back to `main` in your Git GUI, e.g.,
 in RStudio)._
