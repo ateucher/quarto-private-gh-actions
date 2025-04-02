@@ -50,10 +50,16 @@ you will need to enter your password each time you visit each page on the site,
 which can become tedious. If you click the "remember me" checkbox, it will
 avoid you having to do this.
 
+You can see the rendered and encrypted site for this repository
+[here](https://andyteucher.ca/quarto-private-gh-actions). The password is
+_password_.
+
 Note: For a template to render your site locally, and store and encrypt the
 rendered site in the `docs/` directory in the main branch, see the repository
 template at
 [ateucher/quarto-private-website](https://github.com/ateucher/quarto-private-website).
+
+---
 
 \*_If you forget to include all branches when you create your repository from this
 template, follow the directions on the
