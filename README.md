@@ -40,7 +40,7 @@ enter a password for your site, and click "Run workflow"
 
 ![A screenshot of manually running Quarto Publish workflow in GitHub Actions](run-workflow.png)
 
-After it is rendered, when you visit your site it will present you with a 
+After it is rendered, when you visit your site it will present you with a
 password prompt:
 
 ![Screenshot of a window prompting for a passward](password-page.png)
